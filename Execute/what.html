@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's</title>
+<!-- Include Google Fonts stylesheet -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        opacity: 0.8;
+        background-image:  linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777);
+        background-size: 80px 140px;
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        font-family: 'Dancing Script', cursive;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Added */
+    }
+
+    header {
+        margin: 0;
+        padding: 5px 0;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e699b7;
+    }
+
+    nav {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #fff;
+        font-family: 'Dancing Script', cursive; /* Added */
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        font-family: 'Dancing Script', cursive; /* Added */
+        color: #000;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #e699b7;
+        padding: 10px 0;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .card-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+    }
+
+    .animated-text {
+        animation: pulse 2s infinite, colorChange 5s infinite;
+        font-size: 40px; /* Enlarge font size */
+        margin-bottom: 20px; /* Add some space between h2 and card */
+    }
+
+    .card {
+        background: #191c29;
+        width: 300px;
+        height: 400px;
+        padding: 20px;
+        position: relative;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: rgb(88, 199, 250, 0%);
+        cursor: pointer;
+        font-family: cursive;
+        margin: auto; /* Added */
+    }
+
+    .card:hover {
+        color: rgb(255, 255, 255);
+        transition: color 1s;
+    }
+
+    .card:hover::before,
+    .card:hover::after {
+        animation: none;
+        opacity: 0;
+    }
+
+    .card::before {
+        content: "";
+        width: 104%;
+        height: 102%;
+        border-radius: 8px;
+        background-image: linear-gradient(var(--rotate), #ff5dd7, #db219d 43%, #ff04c0);
+        position: absolute;
+        z-index: -1;
+        top: -1%;
+        left: -2%;
+        animation: spin 2.5s linear infinite;
+    }
+
+    .card::after {
+        position: absolute;
+        content: "";
+        top: calc(50% - 10%);
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 10%;
+        width: 100%;
+        margin: 0 auto;
+        transform: scale(0.8);
+        filter: blur(calc(50% - 10%));
+        background-image: linear-gradient(var(--rotate), #d64aa8, #e221b2 43%, #ff009d);
+        opacity: 1;
+        transition: opacity 0.5s;
+        animation: spin 2.5s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            --rotate: 0deg;
+        }
+        100% {
+            --rotate: 360deg;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: #ff007f; /* Start color */
+        }
+        50% {
+            color: #ec0000; /* Middle color */
+        }
+        100% {
+            color: #ff007f; /* End color */
+        }
+    }
+
+    a {
+        color: #212534;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="dancing-script-1">Aira M. Pangilinan</h1>
+</header>
+
+<nav>
+    <a href="directory.html">Home</a>
+    <a href="when.html">When</a>
+    <a href="who.html">Who</a>
+    <a href="where.html">Where</a>
+</nav>
+
+<div class="card-container">
+    <h2 class="animated-text">What is Up???</h2> <!-- Added animation class -->
+    <div class="card">
+        Since you chose the "Yes" button, (As you should be!!) You're probably wondering what's this about.... Well love,
+        this is my way of asking you out on a date during the Valentines Day. All the information you need can be seen in
+        this website. I love you so much, baby!!!
+    </div>
+</div>
+
+<footer>
+    February 13, 2024
+</footer>
+
+</body>
+</html>

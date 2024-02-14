@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's</title>
+<!-- Include Google Fonts stylesheet -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0; /* Reset default margin */
+        padding: 0; /* Reset default padding */
+        background-color: #ffffff;
+        opacity: 0.8;
+        background-image:  linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777);
+        background-size: 80px 140px;
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Make the body at least full viewport height */
+    }
+
+    header {
+    margin: 0; /* Reset default margin */
+    padding: 5px 0; /* Adjust top and bottom padding */
+    height: 50px; /* Set a fixed height */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: #e699b7;
+}
+
+    nav {
+        margin: 0; /* Reset default margin */
+        padding: 10px 0; /* Adjust top and bottom padding */
+        text-align: center;
+        background-color: #fff;
+    }
+
+    nav a {
+        margin: 0 10px; /* Adjust margin between navigation links */
+        text-decoration: none;
+        color: #000;
+        visibility: hidden; /* Hide the text */
+    }
+
+    .wrapper {
+        flex: 1; /* Allow this section to grow */
+        overflow-y: auto; /* Add scroll if content exceeds viewport height */
+    }
+
+    .top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add space between the GIF and the container */
+}
+
+    .bottom-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container {
+        position: relative;
+        width: 100%; /* Adjust width as needed */
+        height: 448px;
+        border: 1px solid rgba(233, 0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align items at the top of the container */
+        z-index: 2; /* Ensure the container is above the footer */
+    }
+
+    #yesButton,
+#noButton {
+    position: absolute;
+    background-color: #ff007f;
+    color: #ffffff;
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+    font-size: 24px; /* Increased font size */
+    padding: 15px 30px; /* Increased padding */
+    border: none;
+    border-radius: 30px; /* Increased border radius */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+#yesButton:hover,
+#noButton:hover {
+    background-color: #ff000d; /* Darker shade of pink on hover */
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5); /* Add shadow on hover */
+}
+
+#yesButton {
+    left: calc(50% - 80px); /* Adjust the left position */
+    top: 0; /* Position at the top of the container */
+    margin-left: -20px; /* Add space between the Yes and No buttons */
+}
+
+#noButton {
+    left: calc(50% + 80px); /* Adjust the left position */
+    top: 0; /* Position at the top of the container */
+    margin-left: -50px; /* Add space between the Yes and No buttons */
+}
+
+
+    #heartsGif {
+        position: relative;
+        z-index: -1;
+        width: 20%; /* Adjust width as needed */
+        height: 60%; /* Adjust height as needed */
+    }
+
+    footer {
+        text-align: center;
+        background-color: #e699b7;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    /* Animation for h2 */
+    .animated-text {
+        animation: pulse 2s infinite, colorChange 5s infinite;
+        font-size: 40px; /* Enlarge font size */
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: #ff007f; /* Start color */
+        }
+        50% {
+            color: #ec0000; /* Middle color */
+        }
+        100% {
+            color: #ff007f; /* End color */
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="dancing-script-1">Aira M. Pangilinan</h1>
+</header>
+
+<nav>
+    <a href="what.html"></a>
+    <a href="when.html"></a>
+    <a href="who.html"></a>
+    <a href="where.html"></a>
+</nav>
+
+<div class="wrapper">
+    <div class="top-section">
+        <h2 class="animated-text">Will you be my Valentine?</h2> <!-- Added animation class -->
+        <img src="https://media.tenor.com/U45Q8YaJzBUAAAAM/moti-hearts.gif" alt="Hearts GIF" id="heartsGif">
+        <!-- Other elements can be added here -->
+    </div>
+
+    <div class="bottom-section">
+        <div id="container">
+            <button id="yesButton" onclick="confirmYes()">Yes</button>
+            <button id="noButton" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    February 13, 2024
+</footer>
+
+<script>
+function confirmYes() {
+    // Display a confirmation dialog
+    var confirmation = confirm("Yeyyy!!! I love you so much, baby!!!");
+    
+    // If the user clicks OK in the confirmation dialog, redirect to celebration.html
+    if (confirmation) {
+        window.location.href = 'celebration.html';
+    }
+}
+
+function moveButton() {
+    var container = document.getElementById('container');
+    var yesButton = document.getElementById('yesButton');
+    var noButton = document.getElementById('noButton');
+    
+    var containerRect = container.getBoundingClientRect();
+    var maxX = containerRect.width - noButton.offsetWidth;
+    var maxY = containerRect.height - noButton.offsetHeight;
+
+    // Calculate the minimum distance to keep buttons from overlapping
+    var minDistance = yesButton.offsetWidth / 2 + noButton.offsetWidth / 2;
+
+    var newX = Math.floor(Math.random() * maxX);
+    var newY = Math.floor(Math.random() * maxY);
+
+    // Keep generating new positions until the buttons are not overlapping
+    while (Math.abs(newX - yesButton.offsetLeft) < minDistance && Math.abs(newY - yesButton.offsetTop) < minDistance) {
+        newX = Math.floor(Math.random() * maxX);
+        newY = Math.floor(Math.random() * maxY);
+    }
+
+    noButton.style.left = newX + 'px';
+    noButton.style.top = newY + 'px';
+}
+</script>
+
+</body>
+</html>

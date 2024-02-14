@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's</title>
+<!-- Include Google Fonts stylesheet -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        opacity: 0.8;
+        background-image:  linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777);
+        background-size: 80px 140px;
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        font-family: 'Dancing Script', cursive;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        margin: 0;
+        padding: 5px 0;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e699b7;
+    }
+
+    nav {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #e699b7;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .countdown-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        position: relative; /* Position relative for absolute positioning of stickers */
+        background-color: rgba(236, 230, 230, 0.226); /* Opaque background */
+        padding: 20px; /* Add padding to the container */
+    }
+
+    .countdown {
+        font-size: 60px; /* Larger font size */
+        font-weight: bold;
+        color: #fff;
+        margin-top: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding a shadow for better visibility */
+    }
+    
+    .gif-sticker {
+        max-width: 100px; /* Adjust size of the stickers */
+        position: absolute; /* Position the stickers absolutely */
+    }
+    
+    .gif-sticker1 {
+        top: 50px; /* Adjust position of the first sticker */
+        left: 50px; /* Adjust position of the first sticker */
+    }
+    
+    .gif-sticker2 {
+        bottom: 50px; /* Adjust position of the second sticker */
+        right: 50px; /* Adjust position of the second sticker */
+    }
+    
+    .flip-clock {
+        perspective: 200px;
+        margin: 10px;
+    }
+    
+    .upper {
+        transform-origin: top;
+        transform: rotateX(0deg);
+        animation: flip-top 1s 1 forwards;
+    }
+    
+    .lower {
+        transform-origin: bottom;
+        transform: rotateX(-180deg);
+        animation: flip-bottom 1s 1 forwards;
+    }
+    
+    @keyframes flip-top {
+        0% {
+            transform: rotateX(0deg);
+        }
+        100% {
+            transform: rotateX(180deg);
+        }
+    }
+    
+    @keyframes flip-bottom {
+        0% {
+            transform: rotateX(-180deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="dancing-script-1">Aira M. Pangilinan</h1>
+</header>
+
+<nav>
+    <a href="directory.html">Home</a>
+    <a href="what.html">What</a>
+    <a href="who.html">Who</a>
+    <a href="where.html">Where</a>
+</nav>
+
+<div class="countdown-container">
+    <div class="countdown" id="countdown"></div>
+    <!-- Add first GIF sticker -->
+    <img src="https://media.tenor.com/zr5wWOSB5ZEAAAAj/happy.gif" alt="Sticker" class="gif-sticker gif-sticker1">
+    <!-- Add second GIF sticker -->
+    <img src="https://media.tenor.com/oWzo8F28BgcAAAAj/cartoon-cute.gif" alt="Sticker" class="gif-sticker gif-sticker2">
+</div>
+
+<footer>
+    February 13, 2024
+</footer>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("February 14, 2024 17:00:00").getTime();
+
+    // Update the countdown every 1 second
+    var x = setInterval(function() {
+
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the countdown date
+        var distance = countDownDate - now;
+
+        // Calculate days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown in the element with id="countdown"
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

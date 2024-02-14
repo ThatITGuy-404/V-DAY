@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's</title>
+<!-- Include Google Fonts stylesheet -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Dancing Script', cursive;
+        background-color: #ffffff;
+        opacity: 0.8;
+        background-image:  linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(30deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(150deg, #e699b7 12%, transparent 12.5%, transparent 87%, #e699b7 87.5%, #e699b7), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777), linear-gradient(60deg, #e699b777 25%, transparent 25.5%, transparent 75%, #e699b777 75%, #e699b777);
+        background-size: 80px 140px;
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        min-height: 100vh; /* Set minimum height to full viewport height */
+        position: relative; /* Position relative for footer placement */
+    }
+
+    header {
+        margin: 0;
+        padding: 5px 0;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e699b7;
+    }
+
+    nav {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000;
+        font-size: 0; /* Hide text */
+    }
+
+    .gif-container {
+        display: flex;
+        flex-direction: row; /* Arrange GIFs in rows */
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /* Add style for the GIF images */
+    .gif-image {
+        width: 200px; /* Set the desired width */
+        height: 200px; /* Set the desired height */
+        display: block; /* Ensure the images are displayed as block elements */
+        margin: 0 10px; /* Add horizontal margin */
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /* Style for the button */
+    .next-button {
+    padding: 15px 30px; /* Increased padding */
+    background-color: #ff007f; /* Pink background color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded border */
+    font-size: 20px; /* Increased font size */
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.next-button:hover {
+    background-color: #ff000d; /* Darker shade of pink on hover */
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5); /* Add shadow on hover */
+}
+
+
+    footer {
+        position: absolute; /* Position absolute for sticky footer */
+        bottom: 0; /* Stick to the bottom of the page */
+        width: 100%; /* Full width */
+        background-color: #e699b7;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Animation for h2 */
+    .animated-text {
+        animation: pulse 2s infinite, colorChange 5s infinite;
+        font-size: 40px; /* Enlarge font size */
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: #ff007f; /* Start color */
+        }
+        50% {
+            color: #ec0000; /* Middle color */
+        }
+        100% {
+            color: #ff007f; /* End color */
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="dancing-script-1">Aira M. Pangilinan</h1>
+</header>
+
+<nav>
+    <a href="clickme.html"></a>
+    <a href="what.html"></a>
+    <a href="who.html"></a>
+    <a href="where.html"></a>
+</nav>
+
+<div class="container">
+    <h2 class="animated-text">Great choice, love!!!</h2> <!-- Added animated h2 -->
+
+    <div class="gif-container">
+        <!-- Add the GIF images with the specified class -->
+        <img src="https://media.tenor.com/oVRzSDBjXtQAAAAM/dance-party.gif" alt="Dance Party GIF" class="gif-image">
+        <img src="https://media.tenor.com/J8GV21cQO3QAAAAM/bb-baby.gif" alt="Baby GIF" class="gif-image">
+        <img src="https://media.tenor.com/Cif2uCwNNU8AAAAM/letsparty-happy.gif" alt="Let's Party GIF" class="gif-image">
+    </div>
+
+    <div class="button-container">
+        <!-- Wrap the button in an anchor tag with the href attribute set to "directory.html" -->
+        <a href="directory.html" class="next-button">Next</a>
+    </div>
+
+    <div class="gif-container">
+        <!-- Add the GIF images with the specified class -->
+        <img src="https://media.tenor.com/cxTcj3HA0CsAAAAM/mochi-peach.gif" alt="Mochi Peach GIF" class="gif-image">
+        <img src="https://media.tenor.com/y0zptlFKiYIAAAAM/yay-kitty.gif" alt="Yay Kitty GIF" class="gif-image">
+        <img src="https://media.tenor.com/N0-A-QIkUOcAAAAM/celebration-dancing.gif" alt="Celebration Dancing GIF" class="gif-image">
+    </div>
+</div>
+
+<footer>
+    February 13, 2024
+</footer>
+
+</body>
+</html>
